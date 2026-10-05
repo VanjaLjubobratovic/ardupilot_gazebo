@@ -232,6 +232,8 @@ void GstCameraPlugin::PreUpdate(const UpdateInfo &_info,
               << impl->enableTopic << "]" << std::endl;
 
         impl->requestedStartStreaming = impl->autoStartStream;
+        gzmsg << "GstCameraPlugin: auto start stream ["
+              << impl->autoStartStream << "]" << std::endl;
         
         // subscribe to gazebo topics
         impl->node.Subscribe(impl->imageTopic,
